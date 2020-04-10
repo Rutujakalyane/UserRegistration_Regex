@@ -39,7 +39,21 @@ emailRegexPat="^[a-zA-Z0-9]+([.+,-,_]?[a-zA-Z0-9]+)?[@][a-zA-Z]+[.][a-zA-Z]{2,4}
               echo "Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions";
       fi
 }
+function mobileRegex()
+{
+echo "Enter your mobile: "
+read mobile
 
-firstNameRegex
-lastNameRegex
-emailRegex
+mobileRegexPat="^[0-9]{2}[ ][0-9]{10}$"
+      if [[ $mobile =~ $mobileRegexPat ]]
+      then
+             echo valid;
+      else
+             echo "invalid: Eg: 91 9876543210"
+             echo "Country code 2 digits, follows by space then 10 digits number";
+      fi
+}
+#firstNameRegex
+#lastNameRegex
+#emailRegex
+mobileRegex
