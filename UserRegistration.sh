@@ -53,7 +53,22 @@ mobileRegexPat="^[0-9]{2}[ ][0-9]{10}$"
              echo "Country code 2 digits, follows by space then 10 digits number";
       fi
 }
+function passwordRegex()
+{
+echo "Enter your password: "
+read passwd
+
+rule1="^[a-zA-Z0-9]{8,}$"
+passwdRegexPat="^[a-zA-Z0-9]{8,}$"
+	if [[ $passwd =~ $passwdRegexPat ]]
+	then
+	        echo valid;
+	else
+	        echo "invalid: Minimum 8 characters "
+	fi
+}
 #firstNameRegex
 #lastNameRegex
 #emailRegex
-mobileRegex
+#mobileRegex
+passwordRegex
