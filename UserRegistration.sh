@@ -51,7 +51,7 @@ mobileRegexPat="^[0-9]{2}[ ][0-9]{10}$"
       else
              echo "invalid: Eg: 91 9876543210"
              echo "Country code 2 digits, follows by space then 10 digits number";
- fi
+      fi
 }
 #firstNameRegex
 #lastNameRegex
