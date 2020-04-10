@@ -59,20 +59,6 @@ echo "Enter your password: "
 read passwd
 
 rule1="^[a-zA-Z0-9]{8,}$"
-passwdRegexPat="^[a-zA-Z0-9]{8,}$"
-	if [[ $passwd =~ $passwdRegexPat ]]
-	then
-	        echo valid;
-	else
-	        echo "invalid: Minimum 8 characters "
-	fi
-}
-function passwordRegex()
-{
-echo "Enter your password: "
-read passwd
-
-rule1="^[a-zA-Z0-9]{8,}$"
 rule2="([A-Z]+[a-z]*)+|([a-z]*[A-Z]+)+|([a-z]*[A-Z]+[a-z]*)+)"
 passwdRegexPat=$rule2
 	if [[ $passwd =~ $passwdRegexPat ]] && [[ ${#passwd} -ge 8 ]]
