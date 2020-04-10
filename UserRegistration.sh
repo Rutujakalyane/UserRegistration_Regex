@@ -67,8 +67,25 @@ passwdRegexPat="^[a-zA-Z0-9]{8,}$"
 	        echo "invalid: Minimum 8 characters "
 	fi
 }
-#firstNameRegex
-#lastNameRegex
-#emailRegex
-#mobileRegex
+function passwordRegex()
+{
+echo "Enter your password: "
+read passwd
+
+rule1="^[a-zA-Z0-9]{8,}$"
+rule2="([A-Z]+[a-z]*)+|([a-z]*[A-Z]+)+|([a-z]*[A-Z]+[a-z]*)+)"
+passwdRegexPat=$rule2
+	if [[ $passwd =~ $passwdRegexPat ]] && [[ ${#passwd} -ge 8 ]]
+	then
+	        echo valid;
+	else
+	        echo "invalid: Minimum 8 characters"
+		echo "Atleast 1 Capital letter"
+	fi
+}
+
+firstNameRegex
+lastNameRegex
+emailRegex
+mobileRegex
 passwordRegex
