@@ -69,6 +69,7 @@ rule4="^[a-zA-Z0-9]*(([0-9][A-Z]+[a-zA-Z0-9]){2}|([A-Z][0-9]+[a-zA-Z0-9]*){2})*[
                 echo "invalid: Minimum 8 characters"
                 echo "Atleast 1 Capital letter"
                 echo "Atlest 1 Numeric"
+                echo "Atleast 1 special char"
         fi
 }
 firstNameRegex
