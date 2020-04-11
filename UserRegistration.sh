@@ -59,17 +59,18 @@ echo "Enter your password: "
 read passwd
 
 rule1="^[a-zA-Z0-9]{8,}$"
-rule2="^[a-zA-Z0-9]{8,}*(.*[A-Z].*{1}+)$"
-passwdRegexPat=$rule2
-	if [[ $passwd =~ $passwdRegexPat ]] && [[ ${#passwd} -ge 8 ]]
-	then
-	        echo valid;
-	else
-	        echo "invalid: Minimum 8 characters"
-		echo "Atleast 1 Capital letter"
-	fi
+rule2="^[0-9a-z]*[A-Z]{1}"
+rule3="[0-9a-zA-Z]{1,}$"
+rule4="^[a-zA-Z0-9]*(([0-9][A-Z]+[a-zA-Z0-9]){2}|([A-Z][0-9]+[a-zA-Z0-9]*){2})*[A-Za-z0-9]*{6,}$"
+        if [[ $passwd =~ $rule1 ]] && [[ $passwd =~ $rule2 ]] && [[ $passwd =~ rule3 ]] && [[ $passwd =~ rule3 ]]
+        then
+                echo valid;
+        else
+                echo "invalid: Minimum 8 characters"
+                echo "Atleast 1 Capital letter"
+                echo "Atlest 1 Numeric"
+        fi
 }
-
 firstNameRegex
 lastNameRegex
 emailRegex
