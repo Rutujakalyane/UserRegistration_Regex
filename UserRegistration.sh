@@ -61,7 +61,7 @@ read passwd
 rule1="^[a-zA-Z0-9]{8,}$"
 rule2="^[0-9a-z]*[A-Z]{1}"
 rule3="[0-9a-zA-Z]{1,}$"
-rule4="^[a-zA-Z0-9]*(([0-9][A-Z]+[a-zA-Z0-9]){2}|([A-Z][0-9]+[a-zA-Z0-9]*){2})*[A-Za-z0-9]*{6,}$"
+rule4="[~!@#$]{1}$"
         if [[ $passwd =~ $rule1 ]] && [[ $passwd =~ $rule2 ]] && [[ $passwd =~ rule3 ]] && [[ $passwd =~ rule3 ]]
         then
                 echo valid;
