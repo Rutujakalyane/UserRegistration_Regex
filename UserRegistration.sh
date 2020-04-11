@@ -59,7 +59,7 @@ echo "Enter your password: "
 read passwd
 
 rule1="^[a-zA-Z0-9]{8,}$"
-rule2="([A-Z]+[a-z]*)+|([a-z]*[A-Z]+)+|([a-z]*[A-Z]+[a-z]*)+)"
+rule2="^[a-zA-Z0-9]{8,}*(.*[A-Z].*{1}+)$"
 passwdRegexPat=$rule2
 	if [[ $passwd =~ $passwdRegexPat ]] && [[ ${#passwd} -ge 8 ]]
 	then
